@@ -43,4 +43,7 @@ PS:
 4.目前部署方式路子比较野，找时间完善一下
 
 另外其他问题请联系 zkeal@outlook.com
+欢迎大家多多交流
+
+给一个土地抵押的截图
 ![image](https://github.com/zkeal/landchina_spider/blob/master/example.PNG)
