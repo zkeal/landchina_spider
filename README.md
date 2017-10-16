@@ -37,9 +37,13 @@ scrapy crawl DistrictTree -a date='2017-01-01~2017-02-01'
 就会自动爬取2017-01-01 至2017-02-01 的所有数据
 
 PS:
-1.目前设置当线程 ，delay 12S,多了landchina的服务器受不住，也有可能被封禁。
+1.目前设置单线程 ，delay 12S,多了landchina的服务器受不住，也有可能被封禁（慢慢爬吧，不然它服务要停十几天）。
 2.使用代理的话请按照 可以参考 https://github.com/kohn/HttpProxyMiddleware  也可以自己实现Middleware
 3.landchina 的接口验证固定参数可能会不定期更新，我这边有空会看一下如何优化。
 4.目前部署方式路子比较野，找时间完善一下
 
 另外其他问题请联系 zkeal@outlook.com
+欢迎大家多多交流
+
+给一个土地抵押的截图
+![image](https://github.com/zkeal/landchina_spider/blob/master/example.PNG)
