@@ -22,8 +22,7 @@ class TreeSpider(scrapy.Spider):
 		yield scrapy.Request('http://www.landchina.com/default.aspx?tabid=264&ComName=default',callback=self.parse_node)
 
 	def parse_node(self,response):
-		zNodes = [{"id":4545,"group":"1","value":"11","name":"北京市","pId":2,"isParent":True}]
-		#zNodes = [{"id":2,"group":"1","value":"0","name":"行政区划","isParent":True},{"id":1,"group":"1","value":"","name":"中国","pId":2,"isParent":False},{"id":4545,"group":"1","value":"11","name":"北京市","pId":2,"isParent":True},{"id":4624,"group":"1","value":"12","name":"天津市","pId":2,"isParent":True},{"id":4701,"group":"1","value":"13","name":"河北省","pId":2,"isParent":True},{"id":5450,"group":"1","value":"14","name":"山西省","pId":2,"isParent":True},{"id":5991,"group":"1","value":"15","name":"内蒙古","pId":2,"isParent":True},{"id":6354,"group":"1","value":"21","name":"辽宁省","pId":2,"isParent":True},{"id":6597,"group":"1","value":"22","name":"吉林省","pId":2,"isParent":True},{"id":76,"group":"1","value":"23","name":"黑龙江省","pId":2,"isParent":True},{"id":378,"group":"1","value":"31","name":"上海市","pId":2,"isParent":True},{"id":419,"group":"1","value":"32","name":"江苏省","pId":2,"isParent":True},{"id":671,"group":"1","value":"33","name":"浙江省","pId":2,"isParent":True},{"id":885,"group":"1","value":"34","name":"安徽省","pId":2,"isParent":True},{"id":1147,"group":"1","value":"35","name":"福建省","pId":2,"isParent":True},{"id":1345,"group":"1","value":"36","name":"江西省","pId":2,"isParent":True},{"id":1577,"group":"1","value":"37","name":"山东省","pId":2,"isParent":True},{"id":1909,"group":"1","value":"41","name":"河南省","pId":2,"isParent":True},{"id":2279,"group":"1","value":"42","name":"湖北省","pId":2,"isParent":True},{"id":2522,"group":"1","value":"43","name":"湖南省","pId":2,"isParent":True},{"id":2807,"group":"1","value":"44","name":"广东省","pId":2,"isParent":True},{"id":3109,"group":"1","value":"45","name":"广西壮族","pId":2,"isParent":True},{"id":3370,"group":"1","value":"46","name":"海南省","pId":2,"isParent":True},{"id":3424,"group":"1","value":"50","name":"重庆市","pId":2,"isParent":True},{"id":3507,"group":"1","value":"51","name":"四川省","pId":2,"isParent":True},{"id":3927,"group":"1","value":"52","name":"贵州省","pId":2,"isParent":True},{"id":4119,"group":"1","value":"53","name":"云南省","pId":2,"isParent":True},{"id":4410,"group":"1","value":"54","name":"西藏","pId":2,"isParent":True},{"id":4586,"group":"1","value":"61","name":"陕西省","pId":2,"isParent":True},{"id":5079,"group":"1","value":"62","name":"甘肃省","pId":2,"isParent":True},{"id":5509,"group":"1","value":"63","name":"青海省","pId":2,"isParent":True},{"id":5701,"group":"1","value":"64","name":"宁夏回族","pId":2,"isParent":True},{"id":5818,"group":"1","value":"65","name":"新疆维吾尔","pId":2,"isParent":True},{"id":6670,"group":"1","value":"66","name":"新疆建设兵团","pId":2,"isParent":True}];	
+		zNodes = [{"id":4545,"group":"1","value":"11","name":"北京市","pId":2,"isParent":True},{"id":4624,"group":"1","value":"12","name":"天津市","pId":2,"isParent":True},{"id":4701,"group":"1","value":"13","name":"河北省","pId":2,"isParent":True},{"id":5450,"group":"1","value":"14","name":"山西省","pId":2,"isParent":True},{"id":5991,"group":"1","value":"15","name":"内蒙古","pId":2,"isParent":True},{"id":6354,"group":"1","value":"21","name":"辽宁省","pId":2,"isParent":True},{"id":6597,"group":"1","value":"22","name":"吉林省","pId":2,"isParent":True},{"id":76,"group":"1","value":"23","name":"黑龙江省","pId":2,"isParent":True},{"id":378,"group":"1","value":"31","name":"上海市","pId":2,"isParent":True},{"id":419,"group":"1","value":"32","name":"江苏省","pId":2,"isParent":True},{"id":671,"group":"1","value":"33","name":"浙江省","pId":2,"isParent":True},{"id":885,"group":"1","value":"34","name":"安徽省","pId":2,"isParent":True},{"id":1147,"group":"1","value":"35","name":"福建省","pId":2,"isParent":True},{"id":1345,"group":"1","value":"36","name":"江西省","pId":2,"isParent":True},{"id":1577,"group":"1","value":"37","name":"山东省","pId":2,"isParent":True},{"id":1909,"group":"1","value":"41","name":"河南省","pId":2,"isParent":True},{"id":2279,"group":"1","value":"42","name":"湖北省","pId":2,"isParent":True},{"id":2522,"group":"1","value":"43","name":"湖南省","pId":2,"isParent":True},{"id":2807,"group":"1","value":"44","name":"广东省","pId":2,"isParent":True},{"id":3109,"group":"1","value":"45","name":"广西壮族","pId":2,"isParent":True},{"id":3370,"group":"1","value":"46","name":"海南省","pId":2,"isParent":True},{"id":3424,"group":"1","value":"50","name":"重庆市","pId":2,"isParent":True},{"id":3507,"group":"1","value":"51","name":"四川省","pId":2,"isParent":True},{"id":3927,"group":"1","value":"52","name":"贵州省","pId":2,"isParent":True},{"id":4119,"group":"1","value":"53","name":"云南省","pId":2,"isParent":True},{"id":4410,"group":"1","value":"54","name":"西藏","pId":2,"isParent":True},{"id":4586,"group":"1","value":"61","name":"陕西省","pId":2,"isParent":True},{"id":5079,"group":"1","value":"62","name":"甘肃省","pId":2,"isParent":True},{"id":5509,"group":"1","value":"63","name":"青海省","pId":2,"isParent":True},{"id":5701,"group":"1","value":"64","name":"宁夏回族","pId":2,"isParent":True},{"id":5818,"group":"1","value":"65","name":"新疆维吾尔","pId":2,"isParent":True},{"id":6670,"group":"1","value":"66","name":"新疆建设兵团","pId":2,"isParent":True}];
 		for Nodes in zNodes:
 			Node_temp=json.loads(json.dumps(Nodes))
 			Node_value=Node_temp['value']
@@ -109,19 +108,12 @@ class TreeSpider(scrapy.Spider):
 					sys.setdefaultencoding('utf8')
 					print sys.getdefaultencoding()
 					url='http://www.landchina.com/default.aspx?tabid=264&ComName=default'
-					#select_data=self.date
-					#query_date='e1098f89-81bb-4e36-bfb7-be69c34d8b4b'+':'+select_data
-					#▓
 					log.msg(node['name'],level=log.INFO)
 					select_district=node['value']+'▓~'+node['name']
 					select_data = self.date
 					query_date = '86451846-6268-424d-b258-a294b5050f98' + ':' + select_data
 					forest_name=response.meta['district_']
-					#select_district='110101▓~东城区'
 					sum_query='21f209f9-8b65-4740-87aa-62f90e5faa47:'+select_district.decode('UTF-8').encode('GBK')+ '|' + query_date
-					#sum_query = str(quert_distric) + '|' + query_date
-					#sum_query='21f209f9-8b65-4740-87aa-62f90e5faa47:110101▓~东城区'
-
 					cookies_query={"ASP.NET_SessionId":"btq3snu4jaxxab2abqgpgnn0",
 									"Hm_lpvt_83853859c7247c5b03b527894622d3fa": "1498471253",
 									"Hm_lvt_83853859c7247c5b03b527894622d3fa": "1498379824"}
@@ -154,19 +146,8 @@ class TreeSpider(scrapy.Spider):
 			log.msg("no json load",level=log.INFO)
 			yield scrapy.Request('http://www.landchina.com/default.aspx?tabid=264&ComName=default',
 								 callback=self.parse_node)
-
 		
 	def parse_detail_Info(self,response):
-		# safe_dog = response.selector.xpath('//script').re(r'.*Verify=(.*)".*')
-		# log.msg(safe_dog,level=log.INFO)
-		# if len(safe_dog) > 0:
-		# 	click_url = response.request.url+ '&WebShieldDRSessionVerify='+ safe_dog[0]
-		# 	time.sleep(2)
-		# 	r = requests.get(click_url, cookies={'safedog-flow-item': ''})
-		# tag = response.selector.xpath("//a[contains(@herf,'http://www.safedog.cn/?from=sitedog')]/text()")
-		# if len(tag) != 0:
-		# 	log.msg("安全狗冻结中,稍等自动开始", level=log.INFO)
-		# 	time.sleep(360)
 		temp_node=response.selector
 		item=response.meta['item']
 		item['detail_flag']=temp_node.xpath("//span[@id='mainModuleContainer_1855_1856_ctl00_ctl00_p1_f1_r1_c2_ctrl']/text()").extract()
@@ -186,9 +167,3 @@ class TreeSpider(scrapy.Spider):
 		item['detail_starttime']=temp_node.xpath("//span[contains(@id,'mainModuleContainer_1855_1856_ctl00_ctl00_p1_f1_r11_c2_ctrl')]/text()").extract()
 		item['detail_endtime']=temp_node.xpath("//span[contains(@id,'mainModuleContainer_1855_1856_ctl00_ctl00_p1_f1_r11_c4_ctrl')]/text()").extract()
 		yield item
-
-		# def  safe_dogtime(response):
-		# 	tag=response.selector.xpath("//a[contains(@herf,'http://www.safedog.cn/?from=sitedog')]/text()")
-		# 	if len(tag)!=0:
-		# 		log.msg("安全狗冻结中,稍等自动开始",level=log.INFO)
-		# 		time.sleep(360)

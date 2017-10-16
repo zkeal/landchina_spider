@@ -71,10 +71,8 @@ class TreeSpider(scrapy.Spider):
 			yield scrapy.FormRequest(url, formdata=param, cookies=cookies_query, callback=self.parse_info,
 									 meta={'data': sum_query, 'page': '1', 'cookie': cookies_query,
 										   'district_1': Node_Name})
-			# yield  scrapy.Request(url,callback=self.parse_tree,method='POST',body='id=11&group=1',cookies={'ASP.NET_SessionId':'mw3mg10xfwf4t4vsmiotygb3','Hm_lvt_83853859c7247c5b03b527894622d3fa':'1496338131','Hm_lpvt_83853859c7247c5b03b527894622d3fa':cooietime_end})
 
 	def parse_info(self,response):
-	#	tr_max=len(response.selector.xpath('(//tr[contains(@onmouseover,"rowClass=this.className")])'))
 		fast_dict = response.request.meta
 		cookies_query=response.meta['cookie']
 		for tr_line in response.selector.xpath('//table[contains(@id,"top2_contentTable")]//tr[contains(@onmouseover,"rowClass=this.className")]'):
