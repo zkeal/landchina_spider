@@ -91,7 +91,7 @@ class TreeSpider(scrapy.Spider):
 			item['date']=tr_line.xpath('td[5]/text()').extract_first()
 			item['dis_link'] = fast_dict.get('district_1')
 			ahref_detail=item['ahref']
-			yield scrapy.Request(ahref_detail,cookies=cookies_query,callback=self.parse_detail_Info,meta={'item':item,'cookie':cookies_query})
+			yield scrapy.Request(ahref_detail,cookies=cookies_query,callback=self.parse_detail_Info,meta={'item':item,'cookie':cookies_query},priority=3)
 		next_tag=len(response.selector.xpath('//td[contains(@class,"pager")]/a[contains(@onclick,"QueryAction.GoPage")]').extract())
 		if next_tag!=0:
 			url='http://www.landchina.com/default.aspx?tabid=264'
@@ -117,7 +117,7 @@ class TreeSpider(scrapy.Spider):
 				'top3_RowButtonActionControl':'',
 				'top3_QuerySubmitPagerData':'1',
 				'top3_QuerySubmitSortData':''}
-			yield scrapy.FormRequest(url,formdata=param,cookies=cookies_query,callback=self.parse_info,meta={'data':sum_query,'page':str(page),'cookie':cookies_query,'district_1':fast_dict.get('district_1')})
+			yield scrapy.FormRequest(url,formdata=param,cookies=cookies_query,callback=self.parse_info,meta={'data':sum_query,'page':str(page),'cookie':cookies_query,'district_1':fast_dict.get('district_1')},priority=2)
 
 		
 	def parse_detail_Info(self,response):
@@ -135,13 +135,3 @@ class TreeSpider(scrapy.Spider):
 		item['detail_date2']=response.selector.xpath("//span[contains(@id,'mainModuleContainer_1855_1856_ctl00_ctl00_p1_f11_r6_c6_ctrl')]/text()").extract()
 		item['detail_price']=response.selector.xpath("//span[contains(@id,'mainModuleContainer_1855_1856_ctl00_ctl00_p1_f11_r7_c2_ctrl')]/text()").extract()
 		yield item
-
-
-		
-			
-			
-			  
-		
-			
-
-			

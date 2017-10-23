@@ -1,7 +1,7 @@
 # coding=utf-8
 import csv
 import xlwt
-
+import pdb
 # Define your item pipelines here
 #
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
@@ -20,7 +20,7 @@ class LandchinaPipeline(object):
     def process_item(self, item, spider):
 	print "begin_wirte"
 	num=0
-	for number in range(0,18):
+	for number in range(0,19):
 		if number==0:
 			self.info.write(self.lines,num,item['number'])
 			print self.lines,num,item['number'],number
@@ -48,19 +48,21 @@ class LandchinaPipeline(object):
                         self.info.write(self.lines,num,item['detail_location'])
 		if number==10:
 			self.info.write(self.lines,num,item['detail_usenumber'])
-		if number==11:
-                        self.info.write(self.lines,num,item['detail_use'])
+		if number == 11:
+			self.info.write(self.lines, num, item['detail_area'])
 		if number==12:
-                        self.info.write(self.lines,num,item['detail_level'])
+                        self.info.write(self.lines,num,item['detail_use'])
 		if number==13:
-                        self.info.write(self.lines,num,item['detail_status'])
+                        self.info.write(self.lines,num,item['detail_level'])
 		if number==14:
-                        self.info.write(self.lines,num,item['detail_years'])
+                        self.info.write(self.lines,num,item['detail_status'])
 		if number==15:
-                        self.info.write(self.lines,num,item['detail_date'])
+                        self.info.write(self.lines,num,item['detail_years'])
 		if number==16:
-                        self.info.write(self.lines,num,item['detail_date2'])
+                        self.info.write(self.lines,num,item['detail_date'])
 		if number==17:
+                        self.info.write(self.lines,num,item['detail_date2'])
+		if number==18:
                         self.info.write(self.lines,num,item['detail_price'])
 		num=num+1
 	self.lines = self.lines+1
