@@ -32,12 +32,12 @@ class TreeSpider(scrapy.Spider):
 			cookies_query={"ASP.NET_SessionId":"btq3snu4jaxxab2abqgpgnn0",
                                 "Hm_lpvt_83853859c7247c5b03b527894622d3fa": "1498471253",
                                 "Hm_lvt_83853859c7247c5b03b527894622d3fa": "1498379824"}
-			yield scrapy.FormRequest(url,formdata={'id': Node_value, 'group': '1'},cookies=cookies_query,callback=self.parse_tree,meta={'district_':Node_Name})
+			yield scrapy.FormRequest(url,formdata={'id': Node_value, 'group': '1'},cookies=cookies_query,callback=self.parse_tree,meta={'district_':Node_Name,'flag':1})
 
 	def parse_tree(self,response):
 		nodes=json.loads(response.body_as_unicode())
 		for node in nodes:
-			if node['isParent']:
+			if response.request.meta.get('flag')==1:
 				url='http://www.landchina.com/ExtendModule/WorkAction/EnumHandler.ashx'
 				value_id=node['value']
 				forest_name=response.meta['district_']+','+node['name']

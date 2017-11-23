@@ -14,7 +14,7 @@ BOT_NAME = 'landchina'
 SPIDER_MODULES = ['landchina.spiders']
 NEWSPIDER_MODULE = 'landchina.spiders'
 
-
+DOWNLOAD_TIMEOUT=180
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'landchina (+http://www.yourdomain.com)'
 
@@ -27,11 +27,11 @@ CONCURRENT_REQUESTS = 1
 # Configure a delay for requests for the same website (default: 0)
 # See http://scrapy.readthedocs.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 12
+DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
-
+DOWNLOAD_TIMEOUT = 300
 # Disable cookies (enabled by default)
 #COOKIES_ENABLED = False
 
@@ -43,7 +43,7 @@ DOWNLOAD_DELAY = 12
 #   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
 #   'Accept-Language': 'en',
 #}
-
+RETRY_TIMES = 7
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
