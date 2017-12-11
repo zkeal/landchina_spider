@@ -90,7 +90,6 @@ class TreeSpider(scrapy.Spider):
 	# 			yield scrapy.FormRequest(url,formdata={'id': value_id, 'group': '1'},cookies=cookies_query,callback=self.parse_tree,meta={'district_':forest_name})
 	# 		else:
 
-			
 
 	def parse_info(self,response):
 		cookies_query=response.meta['cookie']
