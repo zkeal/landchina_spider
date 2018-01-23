@@ -19,7 +19,7 @@ class LandchinaPipeline(object):
 
     def process_item(self, item, spider):
 	print "begin_wirte"
-	num=0
+	num=long(0)
 	for number in range(0,28):
 		if number==0:
 			self.info.write(self.lines,num,item['number'])

@@ -55,7 +55,7 @@ class TreeSpider(scrapy.Spider):
 				'__EVENTVALIDATION': '/wEWAgLK4dKdDQLN3cj/BEGeHoVQyX3FkSU2tYfMPN9qMHJUT6ichBv80ERmbCAL',
 				'hidComName': 'default',
 				'mainModuleContainer_492_1114_495_TabMenu1_selected_index': '0',
-				'top1_QueryConditionItem': 'e1098f89-81bb-4e36-bfb7-be69c34d8b4b',
+				'top1_QueryConditionItem': '8f464b85-2802-458a-8ee6-66ce6186d803%3A310101%A8%88%7E%BB%C6%C6%D6%C7%F8',
 				'top1_QuerySubmitConditionData': sum_query,
 				'top1_QuerySubmitOrderData': '',
 				'top1_RowButtonActionControl': '',

@@ -35,5 +35,5 @@ class LocalRetryMiddleware(RetryMiddleware):
             return response
         if retries > 5:
             log.msg("sleeping for network", level=log.INFO)
-            time.sleep(360)
+            time.sleep(3600)
             return self._retry(request, "safe_dog:retry", spider) or response
