@@ -29,4 +29,9 @@ class LocalRetryMiddleware(RetryMiddleware):
                 log.msg("安全狗冻结中,稍等自动开始", level=log.INFO)
                 time.sleep(360)
                 return self._retry(request, "safe_dog:retry", spider) or response
+            if ("tabid=386" in request.url):
+                log.msg(request.url, level=log.INFO)
+                tag1 = response.selector.xpath("//span[contains(@id,'mainModuleContainer_1855_1856_ctl00_ctl00_p1_f11_r3_c2_ctrl')]/text()").extract()
+                if(len(tag1)==0):
+                    return self._retry(request, "block_white:retry", spider) or response
             return response
